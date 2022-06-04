@@ -6,8 +6,8 @@ import { useEffect } from 'react';
 import Contact from '../components/Contact';
 import Intro from '../components/Intro';
 import PortFolio from '../components/PortFolio';
-import Projects from '../components/Projects';
-import TechStacks from '../components/TechStacks';
+import ProjectContainer from '../components/ProjectContainer';
+import Skills from '../components/Skills';
 // import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {

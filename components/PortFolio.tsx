@@ -1,29 +1,33 @@
-import { Divider } from '@chakra-ui/react';
-import React, { useEffect } from 'react';
+import { Box, Divider } from '@chakra-ui/react';
+import React, { useEffect, useRef } from 'react';
 import Contact from './Contact';
 import Intro from './Intro';
-import Projects from './Projects';
-import TechStacks from './TechStacks';
+import ProjectContainer from './ProjectContainer';
+import Skills from './Skills';
 
 const PortFolio = () => {
-  useEffect(() => {
-    document.body.classList.add('no-scroll');
-    document.body.style.overflow = 'hidden';
-  }, []);
+  const introRef = useRef<HTMLInputElement>(null);
+  const projectRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div>
-      <Intro />
+    <Box bg="blue.800">
+      <div ref={introRef}>
+        <Intro />
+      </div>
       <Divider />
 
-      <Projects />
+      <div>
+        <Skills />
+      </div>
       <Divider />
 
-      <TechStacks />
-      <Divider />
+      <div ref={projectRef}>
+        <ProjectContainer />
+      </div>
+      {/* <Divider /> */}
 
-      <Contact />
-    </div>
+      {/* <Contact /> */}
+    </Box>
   );
 };
 
