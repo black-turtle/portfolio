@@ -1,7 +1,8 @@
 import { Box, Button, Center, Heading, HStack, Text } from '@chakra-ui/react';
 import React from 'react';
-import { FaFacebook, FaFilePdf, FaLinkedinIn } from 'react-icons/fa';
+import { FaFilePdf, FaLinkedinIn } from 'react-icons/fa';
 import { MdOutlineEmail } from 'react-icons/md';
+import { generalData } from '../data/general.data';
 
 const Intro = () => {
   return (
@@ -18,40 +19,52 @@ const Intro = () => {
               fontWeight="bold"
               color="teal.300"
             >
-              Md Khairul Islam
+              {generalData.name}
             </Heading>
-            <Text fontSize={{ base: 'l', sm: '2xl' }}>
-              Full-stack developer
-            </Text>
+            <Text fontSize={{ base: 'l', sm: '2xl' }}>{generalData.role}</Text>
           </Box>
 
           {/* Buttons */}
           <Center mt="10">
             <Box>
               <HStack spacing="5">
-                <Button
-                  as="a"
-                  size="sm"
-                  href="mailto:jonys.mailbox@gmail.com"
-                  colorScheme="messenger"
-                  rightIcon={<MdOutlineEmail />}
-                >
-                  Email
-                </Button>
-                <Button
-                  size="sm"
-                  as="a"
-                  href="https://www.linkedin.com/in/md-khairul-islam-jony"
-                  colorScheme="linkedin"
-                  target="_blank"
-                  rightIcon={<FaLinkedinIn />}
-                >
-                  LinkedIn
-                </Button>
+                {generalData.linkedInUrl && (
+                  <Button
+                    size="sm"
+                    as="a"
+                    href={generalData.linkedInUrl}
+                    colorScheme="linkedin"
+                    target="_blank"
+                    rightIcon={<FaLinkedinIn />}
+                  >
+                    LinkedIn
+                  </Button>
+                )}
 
-                <Button size="sm" colorScheme="teal" rightIcon={<FaFilePdf />}>
-                  Download CV
-                </Button>
+                {generalData.personalEmail && (
+                  <Button
+                    as="a"
+                    size="sm"
+                    href={`mailto:${generalData.personalEmail}`}
+                    colorScheme="messenger"
+                    rightIcon={<MdOutlineEmail />}
+                  >
+                    Email
+                  </Button>
+                )}
+
+                {generalData.cvFileUrl && (
+                  <Button
+                    as="a"
+                    href={generalData.cvFileUrl}
+                    download
+                    size="sm"
+                    colorScheme="teal"
+                    rightIcon={<FaFilePdf />}
+                  >
+                    Download CV
+                  </Button>
+                )}
               </HStack>
             </Box>
           </Center>

@@ -1,7 +1,6 @@
 import {
   Box,
   Center,
-  color,
   Divider,
   Flex,
   Heading,
@@ -10,13 +9,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
-import {
-  MdAddTask,
-  MdCheckCircle,
-  MdDoneAll,
-  MdGroupWork,
-} from 'react-icons/md';
-import { SkillType, skillsData } from '../data/data';
+import { MdDoneAll } from 'react-icons/md';
+import { skillsData } from '../data/skills.data';
+import { SkillType } from '../data/types';
 
 const Skills = () => {
   return (

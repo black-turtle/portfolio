@@ -1,11 +1,11 @@
-import { extendTheme, Divider } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 
 const styles = {
   styles: {
     global: {
       // styles for the `body`
       body: {
-        bg: 'gray.700',
+        bg: 'blue.800',
         color: 'white',
       },
     },

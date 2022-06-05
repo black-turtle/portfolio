@@ -1,8 +1,8 @@
 import { Box, Divider } from '@chakra-ui/react';
-import React, { useEffect, useRef } from 'react';
-import Contact from './Contact';
+import React, { useRef } from 'react';
 import Intro from './Intro';
-import ProjectContainer from './ProjectContainer';
+import JobExperience from './JobExperience';
+import Projects from './Projects';
 import Skills from './Skills';
 
 const PortFolio = () => {
@@ -10,7 +10,7 @@ const PortFolio = () => {
   const projectRef = useRef<HTMLInputElement>(null);
 
   return (
-    <Box bg="blue.800">
+    <Box mb="20">
       <div ref={introRef}>
         <Intro />
       </div>
@@ -22,11 +22,10 @@ const PortFolio = () => {
       <Divider />
 
       <div ref={projectRef}>
-        <ProjectContainer />
+        <Projects />
       </div>
-      {/* <Divider /> */}
-
-      {/* <Contact /> */}
+      <Divider />
+      <JobExperience />
     </Box>
   );
 };

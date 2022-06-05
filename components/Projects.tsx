@@ -1,24 +1,39 @@
 import {
+  Badge,
   Box,
+  Button,
+  Center,
   Flex,
   Heading,
   Image,
-  useColorModeValue,
-  Center,
-  Text,
-  Link,
-  Button,
   List,
-  ListItem,
   ListIcon,
+  ListItem,
   Stack,
-  Badge,
+  Text,
 } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import React from 'react';
 import { MdCheckCircle } from 'react-icons/md';
-import { ProjectType, projectsData } from '../data/data';
+import { projectsData } from '../data/projects.data';
+import { ProjectType } from '../data/types';
 
 const Projects = () => {
+  return (
+    <Box w="100%">
+      <Box minH="100vh">
+        <Center>
+          <Heading mt="4" fontSize={{ base: '2xl', sm: '4xl' }}>
+            My Recent Projects
+          </Heading>
+        </Center>
+
+        <DisplayProjects />
+      </Box>
+    </Box>
+  );
+};
+
+const DisplayProjects = () => {
   return (
     <Flex
       p={{ base: 2, sm: 50 }}
@@ -28,7 +43,7 @@ const Projects = () => {
       wrap="wrap"
     >
       {projectsData.map((project) => (
-        <ProjectCard key="1" {...project} />
+        <ProjectCard key={project.header} {...project} />
       ))}
     </Flex>
   );
@@ -81,8 +96,9 @@ const ProjectCard: React.FC<ProjectType> = (props) => {
                   target="_blank"
                   colorScheme="teal"
                   size="xs"
+                  variant="outline"
                 >
-                  Source
+                  Github
                 </Button>
               )}
             </Stack>
