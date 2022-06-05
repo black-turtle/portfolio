@@ -27,7 +27,7 @@ export const projectsData: ProjectType[] = [
   {
     header: 'Portfolio (This website)',
     previewUrl: '/assets/portfolio-preview.png',
-    demoUrl: '/',
+    demoUrl: 'https://black-turtle.github.io/portfolio',
     sourceUrl: 'https://github.com/black-turtle/portfolio',
     description: `This is a website to showcase projects & experiences.`,
     tags: ['React', 'Next Js', 'Chakra UI'],
