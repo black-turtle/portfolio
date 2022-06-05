@@ -11,7 +11,7 @@ const nextConfig = {
 };
 
 if (BASE_PATH) {
-  nextConfig.basePath = ASSETS_BASE_PATH;
+  nextConfig.basePath = BASE_PATH;
 }
 
 module.exports = nextConfig;
