@@ -7,6 +7,7 @@ const nextConfig = {
   'process.env.BACKEND_URL': prod
     ? 'https://black-turtle.github.io/portfolio'
     : '',
+  basePath: prod ? '/portfolio' : '/',
 };
 
 module.exports = nextConfig;
