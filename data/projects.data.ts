@@ -1,9 +1,11 @@
 import { ProjectType } from './types';
 
+const ASSETS_BASE_PATH = process.env.ASSETS_BASE_PATH || '/assets';
+
 export const projectsData: ProjectType[] = [
   {
     header: 'Imresizer.com',
-    previewUrl: '/assets/imresizer.png',
+    previewUrl: `${ASSETS_BASE_PATH}/imresizer.png`,
     demoUrl: 'https://imresizer.com',
     description: `Imresizer.com is a simple web based image processing tool. 
       It has 2 main functionalities, resize images in various units & reduce image size to specific KB or MB.`,
@@ -26,7 +28,7 @@ export const projectsData: ProjectType[] = [
 
   {
     header: 'Portfolio (This website)',
-    previewUrl: '/assets/portfolio-preview.png',
+    previewUrl: `${ASSETS_BASE_PATH}/portfolio-preview.png`,
     demoUrl: 'https://black-turtle.github.io/portfolio',
     sourceUrl: 'https://github.com/black-turtle/portfolio',
     description: `This is a website to showcase projects & experiences.`,
