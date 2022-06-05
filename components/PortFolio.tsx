@@ -14,18 +14,21 @@ const PortFolio = () => {
       <div ref={introRef}>
         <Intro />
       </div>
-      <Divider />
 
-      <div>
-        <Skills />
-      </div>
       <Divider />
-
       <div ref={projectRef}>
         <Projects />
       </div>
+
       <Divider />
-      <JobExperience />
+      <div>
+        <JobExperience />
+      </div>
+
+      <Divider />
+      <div>
+        <Skills />
+      </div>
     </Box>
   );
 };

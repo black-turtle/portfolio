@@ -34,9 +34,9 @@ export const projectsData: ProjectType[] = [
     description: `This is a website to showcase projects & experiences.`,
     tags: ['React', 'Next Js', 'Chakra UI'],
     features: [
+      'This works as a template. Content can be easily changed by editing few data files. Check github repository for details.',
       'Responsive design (works perfectly with mobile, tablet & desktop devices)',
       'Deployed via github static pages',
-      'This works as a template. Content can be easily changed by editing only a single data file.',
     ],
   },
 ];
