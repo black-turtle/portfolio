@@ -12,7 +12,7 @@ const Intro = () => {
           {/* Intro Section */}
           <Box textAlign="center">
             <Text fontSize={{ base: 'l', sm: 'xl' }} color="gray.400">
-              Hi, I'm
+              Hi, I&apos;m
             </Text>
             <Heading
               fontSize={{ base: '2xl', sm: '4xl', lg: '6xl' }}
