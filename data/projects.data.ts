@@ -17,11 +17,12 @@ export const projectsData: ProjectType[] = [
       'Flask',
       'AWS Ec2',
       'AWS ASG',
+      'Cloudflare CDN',
     ],
     features: [
       'Serves 5 ~ 10 Million users monthly',
-      'All Static files are served by cloudflare CDN',
       'AutoScalable backend (powered by AWS Auto Scaling group)',
+      'All Static files are served by cloudflare CDN',
       'Paypal payment integration',
     ],
   },
@@ -37,6 +38,34 @@ export const projectsData: ProjectType[] = [
       'This works as a template. Content can be easily changed by editing few data files. Check github repository for details.',
       'Responsive design (works perfectly with mobile, tablet & desktop devices)',
       'Deployed via github static pages',
+    ],
+  },
+
+  {
+    header: 'Soccer manager game App',
+    previewUrl: `${ASSETS_BASE_PATH}/soccer-app-preview.png`,
+    demoUrl: '',
+    sourceUrl: 'https://github.com/black-turtle/soccer-app',
+    description: `It's an online app where users can create fantasy teams and players. 
+    This also works as a platform, as users can buy or sell players using it.`,
+    tags: [
+      'React',
+      'Tailwind Css',
+      'Context API',
+      'Java',
+      'Spring Boot',
+      'SQL Database',
+      'Swagger',
+      'Docker',
+      'jWT',
+      'Authentication',
+    ],
+    features: [
+      'Handle user authentication, check authentication before page or api access',
+      'Handle concurrent data update cases while buying same players by multiple users.',
+      'Responsive design (works perfectly with mobile, tablet & desktop devices)',
+      'Proper API documentation maintained using swagger',
+      'Docker compose is used for deploying and testing, so you can easily test or deploy it into cloud',
     ],
   },
 ];

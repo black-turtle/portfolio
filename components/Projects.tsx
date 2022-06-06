@@ -74,7 +74,7 @@ const ProjectCard: React.FC<ProjectType> = (props) => {
           {props.header}
         </Heading>
 
-        {props.demoUrl && (
+        {(props.demoUrl || props.sourceUrl) && (
           <Center>
             <Stack direction="row" wrap="wrap" mt="3">
               {props.demoUrl && (
